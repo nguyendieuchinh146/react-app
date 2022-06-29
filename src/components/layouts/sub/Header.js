@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation, Trans } from "react-i18next";
 //import logo from '../../../logo.svg';
+import LanguageSelector from './LanguageSelector';
 const Header = () => {
+    const { t, i18n } = useTranslation();
     return (
         <header className="App-header">
 
@@ -13,14 +16,15 @@ const Header = () => {
                         {/* <a className="navbar-brand" href="#"><img src={logo} className="App-logo" alt="logo" /></a> */}
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item active">
-                                <Link className="nav-link" to='/'>Home</Link>
+                                <Link className="nav-link" to='/'>{t("Home")}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/about'>About</Link>
+                                <Link className="nav-link" to='/about'>{t("About")}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/product'>Product</Link>
+                                <Link className="nav-link" to='/product'>{t("Product")}</Link>
                             </li>
+                            <LanguageSelector />
                         </ul>
 
                     </div>
