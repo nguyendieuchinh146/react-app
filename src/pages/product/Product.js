@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes,Outlet  } from 'react-router-dom'
-import {ProductList, ProductDetail} from './'
+import { Outlet  } from 'react-router-dom'
 const Product = () => {
     useEffect(() => {
         const getTasks = async () => {
