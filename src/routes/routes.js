@@ -3,6 +3,7 @@ import Home from '../pages/Home'
 import About from '../pages/About'
 import Product from '../pages/product/Product'
 import {ProductList, ProductDetail, ProductListCategory, ProductListOld} from '../pages/product'
+import {Post} from '../pages/posts'
 import {Route} from "react-router-dom";
 import AuthGuard from './AuthGuard'
 
@@ -32,6 +33,7 @@ const routes = [
             },
         ],
     },
+    { path: '/post', component: <Post />}
 ];
 
 const routeCb = (route) => {

@@ -24,6 +24,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to='/product'>{t("Product")}</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/post'>{t("Post")}</Link>
+                            </li>
                             <LanguageSelector />
                         </ul>
 

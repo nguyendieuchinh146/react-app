@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import {Header, Footer} from './components/layouts'
 // import MyForm from './components/MyForm'
 // import MyReducer from './components/MyReducer'
-// import Counter from './features/counter/Counter'
-// import PostsList from './features/post/PostsList'
-// import AddPostForm from './features/post/AddPostForm'
+// import Counter from './redux/counter/Counter'
 import routeList from './routes/routes'
 // import Home from "./pages/Home";
 // import About from "./pages/About";
