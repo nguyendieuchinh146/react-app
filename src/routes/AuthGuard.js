@@ -19,7 +19,7 @@ const AuthGuard = (props) => {
 }
 class MiddleWareRoute{
     AuthenticateLogin(props){
-        let token = null;
+        let token = true;
         const auth = ( token != null ) ? true : null;
         if(!auth){
             return false;
