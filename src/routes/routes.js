@@ -1,8 +1,8 @@
-import Login from './pages/Login'
-import Home from './pages/Home'
-import About from './pages/About'
-import Product from './pages/product/Product'
-import {ProductList, ProductDetail} from './pages/product'
+import Login from '../pages/Login'
+import Home from '../pages/Home'
+import About from '../pages/About'
+import Product from '../pages/product/Product'
+import {ProductList, ProductDetail} from '../pages/product'
 import {Route} from "react-router-dom";
 import AuthGuard from './AuthGuard'
 

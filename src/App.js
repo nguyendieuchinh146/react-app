@@ -6,7 +6,7 @@ import {Header, Footer} from './components/layouts'
 // import Counter from './features/counter/Counter'
 // import PostsList from './features/post/PostsList'
 // import AddPostForm from './features/post/AddPostForm'
-import routeList from './routes'
+import routeList from './routes/routes'
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Product from "./pages/product/Product";
