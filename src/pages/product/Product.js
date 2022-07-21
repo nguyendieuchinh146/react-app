@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Outlet  } from 'react-router-dom'
+import APP_CONFIG from '../../config'
 const Product = () => {
     useEffect(() => {
         const getTasks = async () => {
@@ -11,7 +12,7 @@ const Product = () => {
 
     }, [])
     const fetchProducts = async () => {
-        const res = await fetch('http://localhost/jwt/products/list.php')
+        const res = await fetch(`${APP_CONFIG.APP_API.ENDPOINT}?type=products&action=list`)
         const data = await res.json()
 
         return data

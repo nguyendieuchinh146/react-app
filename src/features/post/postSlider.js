@@ -12,7 +12,7 @@ const postsSlice = createSlice({
             state.push(action.payload)
         },
         postRemoved(state, action) {
-            state = state.filter(post => post.id !== action.payload)
+            state.splice(state.findIndex(post => post.id === action.payload) , 1)
         }
     }
 })
