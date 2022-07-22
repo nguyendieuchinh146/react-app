@@ -1,4 +1,4 @@
-import { FETCH_POSTS, NEW_POST } from './types';
+import { FETCH_POSTS, NEW_POST, DELETE_POST} from './types';
 export const fetchPosts = () => dispatch => {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
@@ -25,4 +25,14 @@ export const createPost = postData => dispatch => {
                 payload: post
             })
         );
+};
+
+
+export const deletePosts = (id) => dispatch => {
+    setTimeout(() => {
+        dispatch({
+            type: DELETE_POST,
+            payload: id
+        })
+    })
 };

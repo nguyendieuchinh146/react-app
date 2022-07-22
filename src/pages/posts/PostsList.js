@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useSelector, connect} from 'react-redux'
 import postStyle from './post.module.sass';
-import {fetchPosts} from "../../redux/post/postActions";
+import {fetchPosts, deletePosts} from "../../redux/post/postActions";
 
 const PostsList = (props) => {
     const posts = props.posts
@@ -10,11 +10,11 @@ const PostsList = (props) => {
     }, [])
 
     const removeItem = (id) => {
-
+        props.deletePosts(id)
     }
     const renderedPosts = posts.map(post => (
         <article className={postStyle['post-excerpt']} key={post.id}>
-            <h5>{post.title}</h5>
+            <h5>{post.title} - {post.id}</h5>
             <p className="post-content">{post.body.substring(0, 100)}</p>
             <button onClick={() => removeItem(post.id)}>Remove</button>
         </article>
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
     posts: state.postStore.posts,
     newPost: state.postStore.post
 });
-export default connect(mapStateToProps, { fetchPosts })(PostsList);
+export default connect(mapStateToProps, { fetchPosts, deletePosts })(PostsList);

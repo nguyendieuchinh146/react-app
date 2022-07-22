@@ -1,4 +1,4 @@
-import { FETCH_POSTS, NEW_POST } from './types';
+import { FETCH_POSTS, NEW_POST, DELETE_POST } from './types';
 
 const initialState = {
     posts: [],
@@ -13,13 +13,19 @@ export default function(state = initialState, action) {
                 posts: action.payload
             };
         case NEW_POST:
-            let newPost = [...state.posts];
-            newPost.unshift(action.payload);
-            console.log(newPost);
+            let newPosts = [...state.posts];
+            newPosts.unshift(action.payload);
             return {
                 ...state,
-                posts: newPost,
+                posts: newPosts,
                 post: action.payload
+            };
+        case DELETE_POST:
+            let posts = [...state.posts];
+            posts.splice(posts.findIndex(post => post.id === action.payload) , 1)
+            return {
+                ...state,
+                posts: posts,
             };
         default:
             return state;

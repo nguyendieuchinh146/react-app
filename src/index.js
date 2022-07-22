@@ -8,6 +8,12 @@ import store from './redux/store'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 
+
+// store.dispatch({ type: 'NEW_POST', payload: {id: 101, title: "tét", body: 'tét111'} })
+// // log: 'Hi!'
+//
+// console.log('State after dispatch: ', store.getState())
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
